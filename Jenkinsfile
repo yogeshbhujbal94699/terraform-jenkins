@@ -1,3 +1,4 @@
+//  ---declarative method-----
 // pipeline {
 //   agent any
 //     stages {
@@ -18,6 +19,8 @@
 //       }
 //     }
 // }
+
+// ---scripted method-----
 node {
       stage('git clone') {
             git branch: 'main', url: 'https://github.com/yogeshbhujbal94699/terraform-jenkins.git'
