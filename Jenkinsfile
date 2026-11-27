@@ -17,7 +17,12 @@ pipeline {
             sh 'terraform plan'
         }
       }
+      stage('terraform apply') {
+        steps {
+            sh 'terraform ${action} -auto-approve'
+        }
     }
+}
 }
 
 // ---scripted method-----
@@ -30,7 +35,10 @@ pipeline {
 //       }
 //       stage('terraform plan') {
 //             sh 'terraform plan'
-//     }
+// //      }
+//           stage('terraform apply') {
+//             sh 'terraform ${action} -auto-approve'
+//         }
 // }
 
 
